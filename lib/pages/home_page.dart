@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               setState(() {
                 if (backgroundColor == Colors.white) {
-                  backgroundColor = Colors.red;
+                  backgroundColor = Colors.redAccent;
                 } else {
                   backgroundColor = Colors.white;
                 }
@@ -42,8 +42,12 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.red,
                 ),
                 child: ListTile(
+                  leading: CircleAvatar(
+                    backgroundImage: NetworkImage(
+                        'https://ui-avatars.com/api/?background=fff&color=ff0000&name=S+P'),
+                  ),
                   title: Text(
-                    'EasyNews',
+                    'Admin',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
@@ -79,76 +83,26 @@ class _HomePageState extends State<HomePage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
             Padding(
-              padding: const EdgeInsets.symmetric(
+              padding: EdgeInsets.symmetric(
                 horizontal: 10.0,
                 vertical: 5.0,
               ),
-              child: Wrap(
-                spacing: 10,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      foregroundColor: Colors.white,
-                      shape: const StadiumBorder(),
-                    ),
-                    child: const Text('Entertainment'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      foregroundColor: Colors.white,
-                      shape: const StadiumBorder(),
-                    ),
-                    child: const Text('Lifestyle'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      foregroundColor: Colors.white,
-                      shape: const StadiumBorder(),
-                    ),
-                    child: const Text('Health'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      foregroundColor: Colors.white,
-                      shape: const StadiumBorder(),
-                    ),
-                    child: const Text('Automotive'),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.redAccent,
-                      foregroundColor: Colors.white,
-                      shape: const StadiumBorder(),
-                    ),
-                    child: const Text('Sport'),
-                  ),
-                ],
-              ),
             ),
-            const NewsBoxWidget(
+            NewsBoxWidget(
               title: 'News 01',
               imagePath: 'images/1.png',
             ),
-            const NewsBoxWidget(
+            NewsBoxWidget(
               title: 'News 02',
               imagePath: 'images/2.png',
             ),
-            const NewsBoxWidget(
+            NewsBoxWidget(
               title: 'News 03',
               imagePath: 'images/3.png',
             ),
-            const NewsBoxWidget(
+            NewsBoxWidget(
               title: 'News 04',
               imagePath: 'images/4.png',
             ),

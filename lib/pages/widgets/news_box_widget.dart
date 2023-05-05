@@ -29,7 +29,7 @@ class NewsBoxWidget extends StatelessWidget {
       child: Container(
         width: double.infinity,
         margin: const EdgeInsets.symmetric(
-          horizontal: 10.0,
+          horizontal: 15.0,
           vertical: 5.0,
         ),
         decoration: BoxDecoration(
@@ -46,7 +46,10 @@ class NewsBoxWidget extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Image.asset(imagePath),
+            Image.asset(
+              imagePath,
+              height: 150,
+            ),
             ListTile(
               title: Text(title),
               trailing: const Icon(Icons.arrow_forward_ios_rounded),

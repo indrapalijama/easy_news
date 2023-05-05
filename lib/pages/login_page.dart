@@ -1,3 +1,4 @@
+import 'package:easynews/pages/register_page.dart';
 import 'package:flutter/material.dart';
 import 'home_page.dart';
 
@@ -12,16 +13,10 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Welcome!',
+            const Text('Easy News',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 55,
-                  fontWeight: FontWeight.bold,
-                )),
-            const Text('EasyNews',
-                style: TextStyle(
-                  color: Colors.white70,
-                  fontSize: 35,
                   fontWeight: FontWeight.bold,
                 )),
             const SizedBox(height: 20.0),
@@ -45,7 +40,12 @@ class LoginPage extends StatelessWidget {
               child: const Text('Login'),
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return const RegisterPage();
+                }));
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.redAccent,
                 foregroundColor: Colors.white,
